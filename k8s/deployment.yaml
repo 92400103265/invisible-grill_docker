@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: invisible-grill-web
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: invisible-grill-web
+
+  template:
+    metadata:
+      labels:
+        app: invisible-grill-web
+
+    spec:
+      containers:
+        - name: invisible-grill-web
+          image: invisible-grill-web:v1
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: 3000
