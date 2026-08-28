@@ -53,8 +53,8 @@ button {
   background: rgba(245, 245, 243, 0.96);
 
   border-bottom: 1px solid #ddd;
-
-  backdrop-filter: blur(12px);
+ -webkit-backdrop-filter: blur(12px);
+backdrop-filter: blur(12px);
 }
 
 .navbar-container {
@@ -1719,6 +1719,7 @@ button {
   box-shadow:
     0 25px 70px rgba(0, 0, 0, 0.09);
 
+   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 
   animation: loginCard 0.8s ease 0.15s both;
